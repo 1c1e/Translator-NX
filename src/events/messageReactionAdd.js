@@ -17,7 +17,7 @@ module.exports = {
       modelType: 'prefer_quality_optimized',
     });
 
-    const footer = `${translatorResult.detectedSourceLang.toUpperCase()} -> ${targetLang}`;
+    const footer = `${translatorResult.detectedSourceLang.toUpperCase()}  -->  ${targetLang}`;
     const description = translatorResult.text;
     const embed = new EmbedBuilder().setColor('#5865f2').setDescription(description).setFooter({ text: footer });
 
