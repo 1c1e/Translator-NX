@@ -1,0 +1,10 @@
+{
+    "$schema": "https://json.schemastore.org/prettierrc.json",
+    "experimentalTernaries": false,
+    "experimentalOperatorPosition": "start",
+    "printWidth": 120,
+    "singleQuote": true,
+    "quoteProps": "consistent",
+    "objectWrap": "collapse",
+    "proseWrap": "always"
+}
