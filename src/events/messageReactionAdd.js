@@ -15,6 +15,8 @@ module.exports = {
     const translatorResult = await translator.translateText(originalMsg.content, null, targetLang, {
       formality: 'prefer_less',
       modelType: 'prefer_quality_optimized',
+      preserveFormatting: true,
+      tagHandling: 'xml'
     });
 
     const footer = `${translatorResult.detectedSourceLang.toUpperCase()}  -->  ${targetLang}`;
@@ -22,6 +24,6 @@ module.exports = {
     const embed = new EmbedBuilder().setColor('#5865f2').setDescription(description).setFooter({ text: footer });
 
     const finalMsg = await originalMsg.reply({ embeds: [embed], allowedMentions: { repliedUser: false } });
-    setTimeout(() => finalMsg.delete(), 30 * 60000);
+    setTimeout(() => finalMsg.delete(), 60 * 60000);
   },
 };
