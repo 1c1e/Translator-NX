@@ -7,6 +7,7 @@ module.exports = {
   async execute(reaction, user) {
     if (user.bot || !languageMap[reaction.emoji.name]) return;
     if (reaction.message.partial) await reaction.message.fetch();
+    if (reaction.message.author?.bot) return;
 
     const targetLang = languageMap[reaction.emoji.name];
     const originalMsg = reaction.message;
